@@ -46,7 +46,7 @@ var quotes = [{Quote: ' When something is important enough, you do it even if th
 ***/
 
 function getRandomQuote(quote){
-   getRandomQuote = (Math.floor(Math.random(quote) * quotes.length));  
+   getRandomQuote = (Math.floor(Math.random() * quotes.length));  
   return getRandomQuote; 
 }
 
