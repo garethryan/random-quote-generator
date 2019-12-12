@@ -46,8 +46,10 @@ var quotes = [{Quote: ' When something is important enough, you do it even if th
 ***/
 
 function getRandomQuote(quote){
-   getRandomQuote = (Math.floor(Math.random() * quotes.length));  
-  return getRandomQuote; 
+   var getRandomQuote = Math.floor(Math.random() * quotes.length);  
+   var getRandomQuote = quotes[getRandomQuote].Citation; 
+   console.log(getRandomQuote); 
+
 }
 
 
@@ -55,13 +57,15 @@ function getRandomQuote(quote){
  * `printQuote` function
 ***/ 
 function printQuote(){
-    printQuote = getRandomQuote; 
-  return printQuote; 
-}
+  printQuote = getRandomQuote; 
+  return getRandomQuote;
+} 
+    
+
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
-console.log(printQuote)
+
