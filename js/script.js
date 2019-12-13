@@ -52,8 +52,8 @@ function getRandomQuote(){
    var randomQuote = quotes[getRandomNumber].Quote; 
    getRandomQuote = quotes[getRandomNumber].Source; 
    getRandomQuote = quotes[getRandomNumber].Citation; 
-   
-   return randomQuote;  
+
+   return getRandomQuote;  
    
 }
 
