@@ -17,7 +17,8 @@ var quotes = [{Quote: ' When something is important enough, you do it even if th
               Source: 'Elon Musk', 
               Citation: 'www.cbsnews.com ', 
               Year: 'May 2012', 
-              Category: 'Automotive',}, 
+              Category: 'Automotive',
+            }, 
               
               {Quote: 'Design is a funny word. Some people think design means how it looks. But of course, if you dig deeper, it’s really how it works',  
               Source: 'Steve Jobs', 
@@ -35,21 +36,22 @@ var quotes = [{Quote: ' When something is important enough, you do it even if th
 ]
  
   var i = 1; i < quotes.length ; i ++; 
-  {  
+    
+   {
     var quote = quotes[i]+= quotes.Source + quotes.Citation + quotes.Year + quotes.Category;
+   }
   
-  }
 
 
 /***
  * `getRandomQuote` function
 ***/
 
-function getRandomQuote(quote){
-   var getRandomQuote = Math.floor(Math.random() * quotes.length);  
-   var getRandomQuote = quotes[getRandomQuote].Citation; 
-   console.log(getRandomQuote); 
-
+function getRandomQuote(){
+   var getRandomNumber = Math.floor(Math.random() * quotes.length);
+   var getRandomQuote = [getRandomNumber].Quote;   
+   return getRandomQuote;  
+   
 }
 
 
@@ -57,10 +59,10 @@ function getRandomQuote(quote){
  * `printQuote` function
 ***/ 
 function printQuote(){
-  printQuote = getRandomQuote; 
-  return getRandomQuote;
+  printQuote = getRandomQuote(quote); 
 } 
-    
+console.log(getRandomQuote); 
+   
 
 /***
  * click event listener for the print quote button
