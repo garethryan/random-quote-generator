@@ -50,8 +50,9 @@ var quotes = [{Quote: ' When something is important enough, you do it even if th
 function getRandomQuote(){
    var getRandomNumber = Math.floor(Math.random() * quotes.length);
    var randomQuote = quotes[getRandomNumber].Quote; 
-   randomQuote = quotes[getRandomNumber].Citation; 
-
+   getRandomQuote = quotes[getRandomNumber].Source; 
+   getRandomQuote = quotes[getRandomNumber].Citation; 
+   
    return randomQuote;  
    
 }
