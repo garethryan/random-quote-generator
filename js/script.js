@@ -34,6 +34,7 @@ var quotes = [{Quote: ' When something is important enough, you do it even if th
                Year: ' Unknown ', 
                Category: 'Comedy',
             },  
+
             {Quote: 'Would I rather be feared or loved? Easy. Both. I want people to be afraid of how much they love me.', 
             Source:  'Michael Scott (Steve Carell),',
             Citation: ' The Office, Season 2: The Fight.', 
@@ -49,7 +50,7 @@ var quotes = [{Quote: ' When something is important enough, you do it even if th
               Category: 'Spiritual',
             }, 
 
-]
+];
  
   var i = 0; i < quotes.length ; i ++; 
     
@@ -71,15 +72,19 @@ function getRandomQuote(){
     
 }
 console.log(getRandomQuote());
- 
+  
+
 /***
  * `printQuote` function
 ***/ 
 function printQuote(){ 
-   var randomQuote = getRandomQuote(); 
+  var randomQuote = getRandomQuote();
+  innerHTML = <p class = "quote"> + randomQuote.Quote</p>; 
   return(randomQuote); 
-  
 } 
+
+document.getElementById("quote-box").innerHTML = printQuote; 
+
 console.log(printQuote()); 
  
    
