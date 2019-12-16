@@ -49,11 +49,9 @@ var quotes = [{Quote: ' When something is important enough, you do it even if th
 
 function getRandomQuote(){
    var getRandomNumber = Math.floor(Math.random() * quotes.length);
-   var randomQuote = quotes[getRandomNumber].Quote; 
-   getRandomQuote = quotes[getRandomNumber].Source; 
-   getRandomQuote = quotes[getRandomNumber].Citation; 
+   var randomQuote = quotes[getRandomNumber]; 
 
-   return getRandomQuote;  
+   return randomQuote;  
    
 }
 
@@ -61,11 +59,11 @@ function getRandomQuote(){
 /***
  * `printQuote` function
 ***/ 
-function printQuote(){
-  var randomQuote = getRandomQuote(); 
-  var newHTLM = "<p class = 'quote'>" + randomQuote.quote + "</p>"
+function printQuote(){ 
+   var randomQuote = getRandomQuote(); 
+  return(randomQuote); 
 } 
-console.log(getRandomQuote); 
+console.log(printQuote); 
    
 
 /***
