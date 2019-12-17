@@ -16,7 +16,7 @@ var quote = '';
 
 var quotes = [{quote: ' When something is important enough, you do it even if the odds are not in your favor',
               source: 'Elon Musk', 
-              citation: 'www.cbsnews.com ', 
+              citation: 'www.cbsnews.com', 
               year: 'May 2012', 
               category: 'Automotive',
             }, 
@@ -31,14 +31,14 @@ var quotes = [{quote: ' When something is important enough, you do it even if th
               { quote: 'Rice is great when you’re hungry and you want 2000 of something.',  
                source: 'Mitch Hedberg', 
                citation: 'Unknown',
-               year: ' Unknown ', 
+               year: '', 
                category: 'Comedy',
             },  
 
             {quote: 'Would I rather be feared or loved? Easy. Both. I want people to be afraid of how much they love me.', 
-            source:  'Michael Scott (Steve Carell),',
+            source:  'Michael Scott (Steve Carell)',
             citation: ' The Office, Season 2: The Fight.', 
-            year: 'Unknown',  
+            year: '2012',  
             category: 'TV',
               },
 
@@ -75,10 +75,16 @@ console.log(getRandomQuote());
 ***/ 
 function printQuote(){ 
   var randomQuote = getRandomQuote();
-  var htmlString = '<p class = "quote"> '+ randomQuote.quote + randomQuote.source + randomQuote.citation + randomQuote.year + randomQuote.category +'</p>'; 
-  document.getElementById("quote-box").htmlstring = htmlString;  
-    
+  var htmlStringQoute = '<p class = "quote"> '+ randomQuote.quote + '</p>'; 
+      htmlStringSource = '<p class = "source" > '+ randomQuote.source + '</p>'
+      htmlStringCitation = '<p class = "citation" > '+ randomQuote.citation + '</p>'
+      htmlStringYear = '<p class = "Year" > '+ randomQuote.year + '</p>'
+      htmlStringCategory = '<p class = "category" > '+ randomQuote.category + '</p>'
 
+
+    htmlString = htmlStringQoute + htmlStringSource + htmlStringCitation + htmlStringYear + htmlStringCategory ; 
+
+    document.getElementById("quote-box").innerHTML = htmlString;
 } 
 console.log(printQuote()); 
  
