@@ -77,7 +77,18 @@ function printQuote(){
 
 
   htmlString = htmlStringQuote + htmlStringSource + htmlStringCitation + htmlStringYear + htmlStringCategory ; 
- 
+  /***
+   Auto Refresh Quote Function. 
+   */
+  
+  var autoRefresh; 
+
+  function quoteTimerStart(){ 
+    
+    var quoteTimerStart = setInterval(htmlString, 30000, ); 
+        
+
+     }  
    
     document.getElementById("quote-box").innerHTML = htmlString;
   }; 
