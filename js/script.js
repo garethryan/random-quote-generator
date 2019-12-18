@@ -52,10 +52,6 @@ var quotes = [{quote: ' When something is important enough, you do it even if th
 
 ];
  
-
-
-
-
 /***
  * `getRandomQuote` function
 ***/
@@ -67,7 +63,6 @@ function getRandomQuote(){
    return randomQuote;  
     
 }
-console.log(getRandomQuote());
   
 
 /***
@@ -75,19 +70,44 @@ console.log(getRandomQuote());
 ***/ 
 function printQuote(){ 
   var randomQuote = getRandomQuote();
-  var htmlStringQoute = '<p class = "quote"> '+ randomQuote.quote + '</p>'; 
-      htmlStringSource = '<p class = "source" > '+ randomQuote.source + '</p>'
-      htmlStringCitation = '<p class = "citation" > '+ randomQuote.citation + '</p>'
-      htmlStringYear = '<p class = "Year" > '+ randomQuote.year + '</p>'
-      htmlStringCategory = '<p class = "category" > '+ randomQuote.category + '</p>'
+  var htmlQoute = '<p class = "quote"> '+ randomQuote.quote + '</p>'; 
+      htmlSource = '<p class = "source" > '+ randomQuote.source + '</p>'
+      htmlCitation = '<p class = "citation" > '+ randomQuote.citation + '</p>'
+      htmlYear = '<p class = "year" > '+ randomQuote.year + '</p>'
+      htmlCategory = '<p class = "category" > '+ randomQuote.category + '</p>'
 
 
-    htmlString = htmlStringQoute + htmlStringSource + htmlStringCitation + htmlStringYear + htmlStringCategory ; 
+    htmlString = htmlQoute + htmlSource + htmlCitation + htmlYear + htmlCategory ; 
 
     document.getElementById("quote-box").innerHTML = htmlString;
 } 
-console.log(printQuote()); 
  
+/*** Random color generator 
+ * 
+ ***/
+
+var numberString = ''; 
+var rgbColor; 
+var randomColor; 
+
+   function randomRGB(){ 
+     return Math.floor(Math.random() * 256); 
+   }
+   function randomColor(){
+    var color = 'rgb('; 
+    color += randomRGB()+ ','; 
+    color += randomRGB()+ ','; 
+    color += randomRGB()+ ',)'; 
+    return color; 
+
+   }
+     for (var i = 0; i < 100; i +=1 ){
+       rgbColor = randomColor;  
+     }; 
+
+    console.log(rgbColor()); 
+
+
    
 
 /***
