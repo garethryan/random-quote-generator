@@ -12,7 +12,7 @@ project 1 - A Random Quote Generator
 
  ***/
 var quote = ''; 
-
+var htmlString = ','; 
 
 var quotes = [{quote: ' When something is important enough, you do it even if the odds are not in your favor',
               source: 'Elon Musk', 
@@ -78,13 +78,14 @@ function printQuote(){
   var htmlStringCategory = '<p class = "category" > '+ randomQuote.category + '</p>'; 
 
 
-  var htmlString = htmlStringQuote + htmlStringSource + htmlStringCitation + htmlStringYear + htmlStringCategory ; 
+    htmlString = htmlStringQuote + htmlStringSource + htmlStringCitation + htmlStringYear + htmlStringCategory ; 
      document.getElementById("quote-box").innerHTML = htmlString;
+     console.log(htmlString()); 
+
   }; 
 
 
 
- console.log(htmlString()); 
 
 
 /*** Random color generator 
@@ -111,7 +112,7 @@ var randomColor;
      }; 
 
     console.log(rgbColor()); 
-
+    console.log(printQuote()); 
 
    
 
