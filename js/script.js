@@ -11,7 +11,6 @@ project 1 - A Random Quote Generator
  * `quotes` array 
 
  ***/
-var quote = ''; 
 var htmlString = ','; 
 
 var quotes = [{quote: ' When something is important enough, you do it even if the odds are not in your favor',
@@ -64,7 +63,6 @@ function getRandomQuote(){
     
 }
   
-
 /***
  * `printQuote` function
 ***/ 
@@ -78,14 +76,12 @@ function printQuote(){
   var htmlStringCategory = '<p class = "category" > '+ randomQuote.category + '</p>'; 
 
 
-    htmlString = htmlStringQuote + htmlStringSource + htmlStringCitation + htmlStringYear + htmlStringCategory ; 
-     document.getElementById("quote-box").innerHTML = htmlString;
-     console.log(htmlString()); 
-
+  htmlString = htmlStringQuote + htmlStringSource + htmlStringCitation + htmlStringYear + htmlStringCategory ; 
+ 
+   
+    document.getElementById("quote-box").innerHTML = htmlString;
   }; 
-
-
-
+console.log(htmlString); 
 
 
 /*** Random color generator 
@@ -112,9 +108,8 @@ var randomColor;
      }; 
 
     console.log(rgbColor()); 
-    console.log(printQuote()); 
 
-   
+
 
 /***
  * click event listener for the print quote button
