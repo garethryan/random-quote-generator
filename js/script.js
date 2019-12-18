@@ -70,18 +70,23 @@ function getRandomQuote(){
 ***/ 
 function printQuote(){ 
   var randomQuote = getRandomQuote();
-  var htmlQoute = '<p class = "quote"> '+ randomQuote.quote + '</p>'; 
-      htmlSource = '<p class = "source" > '+ randomQuote.source + '</p>'
-      htmlCitation = '<p class = "citation" > '+ randomQuote.citation + '</p>'
-      htmlYear = '<p class = "year" > '+ randomQuote.year + '</p>'
-      htmlCategory = '<p class = "category" > '+ randomQuote.category + '</p>'
+  
+  var htmlStringQuote = '<p class = "quote"> '+ randomQuote.quote + '</p>'; 
+  var htmlStringSource = '<p class = "source" > '+ randomQuote.source + '</p>'; 
+  var htmlStringCitation = '<p class = "citation" > '+ randomQuote.citation + '</p>';
+  var htmlStringYear = '<p class = "year" > '+ randomQuote.year + '</p>'; 
+  var htmlStringCategory = '<p class = "category" > '+ randomQuote.category + '</p>'; 
 
 
-    htmlString = htmlQoute + htmlSource + htmlCitation + htmlYear + htmlCategory ; 
+  var htmlString = htmlStringQuote + htmlStringSource + htmlStringCitation + htmlStringYear + htmlStringCategory ; 
+     document.getElementById("quote-box").innerHTML = htmlString;
+  }; 
 
-    document.getElementById("quote-box").innerHTML = htmlString;
-} 
- 
+
+
+ console.log(htmlString()); 
+
+
 /*** Random color generator 
  * 
  ***/
