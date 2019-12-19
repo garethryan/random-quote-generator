@@ -52,19 +52,22 @@ var quotes = [{quote: ' When something is important enough, you do it even if th
 ];
  
 /***
- * `getRandomQuote` function
+ * getRandomQuote function
+ * generate and pick a random number within the length of the array. 
+ * return the index number to the getRandomQuote function
 ***/
 
 function getRandomQuote(){
    var getRandomNumber = Math.floor(Math.random() * quotes.length);
    var randomQuote = quotes[getRandomNumber]; 
-
    return randomQuote;  
-    
-}
-  
+
+};
+console.log(getRandomQuote); 
+
 /***
  * `printQuote` function
+ *  take the randomQuote index number and assign string values to an html string
 ***/ 
 function printQuote(){ 
   var randomQuote = getRandomQuote();
@@ -77,50 +80,10 @@ function printQuote(){
 
 
   htmlString = htmlStringQuote + htmlStringSource + htmlStringCitation + htmlStringYear + htmlStringCategory ; 
-  /***
-   Auto Refresh Quote Function. 
-   */
-  
-  var autoRefresh; 
-
-  function quoteTimerStart(){ 
-    
-    var quoteTimerStart = setInterval(htmlString, 30000, ); 
-        
-
-     }  
-   
-    document.getElementById("quote-box").innerHTML = htmlString;
-  }; 
-console.log(htmlString); 
-
-
-/*** Random color generator 
- * 
- ***/
-
-var numberString = ''; 
-var rgbColor; 
-var randomColor; 
-
-   function randomRGB(){ 
-     return Math.floor(Math.random() * 256); 
-   }
-   function randomColor(){
-    var color = 'rgb('; 
-    color += randomRGB()+ ','; 
-    color += randomRGB()+ ','; 
-    color += randomRGB()+ ',)'; 
-    return color; 
-
-   }
-     for (var i = 0; i < 100; i +=1 ){
-       rgbColor = randomColor;  
-     }; 
-
-    console.log(rgbColor()); 
-
-
+  document.getElementById("quote-box").innerHTML = htmlString;
+  return(htmlString); 
+}; 
+console.log(printQuote); 
 
 /***
  * click event listener for the print quote button
